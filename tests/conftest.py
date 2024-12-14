@@ -215,6 +215,7 @@ async def manager_user(db_session: AsyncSession):
 @pytest.fixture
 def user_base_data():
     return {
+        "first_name": "John",
         "username": "john_doe_123",
         "email": "john.doe@example.com",
         "full_name": "John Doe",
@@ -240,6 +241,7 @@ def user_create_data(user_base_data):
 @pytest.fixture
 def user_update_data():
     return {
+        "first_name": "John",
         "email": "john.doe.new@example.com",
         "full_name": "John H. Doe",
         "bio": "I specialize in backend development with Python and Node.js.",
